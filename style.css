@@ -108,7 +108,7 @@ body{
 }
 
 .quiz_box{
-    width: 550px;
+    width: 700px;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -388,8 +388,45 @@ footer button.show{
 .tooltip {
     display: none;
     position: absolute;
-    background-color: #333;
-    color: #fff;
+    background-color: rgb(255, 255, 255);
+    color: black;
     padding: 5px;
     border-radius: 5px;
+    z-index: 9999999;
+    border: 2px solid rgb(0, 0, 0);
 }
+
+.caja {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -100px;
+  }
+  
+  /* Estilos para el texto dentro de input_exam_label */
+  .input_exam_label span {
+    color: white; /* Cambia el color del texto a azul o el color que desees */
+    font-size: 25px; /* Ajusta el tamaño de la fuente como desees */
+    font-weight: 500;
+  }
+  
+  /* Estilos para el input */
+  .input_exam input[type="text"] {
+    padding-left: 8px;
+    width: 700px; /* Ajusta el ancho como desees */
+    height: 60px; /* Ajusta la altura como desees */
+    font-size: 18px; /* Ajusta el tamaño del texto como desees, por ejemplo, 16px */
+    border: none;
+    border-radius: 12px;
+  }
+  
+  
+  
+  
+
+
+
+
+  
+

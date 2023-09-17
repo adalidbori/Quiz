@@ -10,21 +10,58 @@
         <link rel="stylesheet" href="style.css">
         <!-- FontAweome CDN Link for Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <style>
+            /* Estilos para la capa de superposición de carga */
+            .loading-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+                z-index: 9999; /* Z-index alto para estar por encima de todo */
+            }
+    
+            /* Estilos para el indicador de carga */
+            .loading-indicator {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                text-align: center;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+        </style>
     </head>
 
     <body>
+        <div></div>
         <!-- start Quiz button -->
+        <div class="caja">
+            <div class="input_exam_label"><span>Write the name of your source here.</span></div>
+            <div class="input_exam"><input id="input_exam_id" type="text" placeholder="Examples: Azure certification AZ900, The Little Prince book..."></div>
+        </div>
+
         <div class="start_btn"><button>Start Quiz</button></div>
+
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-indicator" id="loading-indicator">
+                <p id="loading-message">Creating exam. Estimated time 1 minute</p>
+            </div>
+        </div>
 
         <!-- Info Box -->
         <div class="info_box">
-            <div class="info-title"><span>Some Rules of this Quiz</span></div>
+            <div class="info-title"><span></span></div>
             <div class="info-list">
-                <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
-                <div class="info">2. Once you select your answer, it can't be undone.</div>
-                <div class="info">3. You can't select any option once time goes off.</div>
-                <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-                <div class="info">5. You'll get points on the basis of your correct answers.</div>
+                <div class="info">1. Once you select your answer, it can't be undone.</div>
+                <div class="info">2. You can't select any option once time goes off.</div>
+                <div class="info">3. You can't exit from the Quiz while you're playing.</div>
+                <div class="info">4. You'll get points on the basis of your correct answers.</div>
             </div>
             <div class="buttons">
                 <button class="quit">Exit Quiz</button>
